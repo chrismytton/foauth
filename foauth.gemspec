@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'faraday', '>= 0.8'
+  gem.add_development_dependency 'rspec', '>= 2.11'
 end
