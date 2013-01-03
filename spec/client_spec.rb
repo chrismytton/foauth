@@ -12,6 +12,6 @@ describe Foauth do
   end
 
   it "authenticates with email and password" do
-    auth.should == 'Basic Ym9iQGV4YW1wbGUub3JnOjEyMw=='
+    expect(auth).to eq 'Basic Ym9iQGV4YW1wbGUub3JnOjEyMw=='
   end
 end
