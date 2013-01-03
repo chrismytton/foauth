@@ -1,9 +1,14 @@
+require 'faraday'
+
 require 'foauth/version'
 require 'foauth/rewrite_middleware'
-require 'foauth/client'
 
 module Foauth
-  def self.new(*args, &block)
-    Foauth::Client.new(*args, &block)
+  def self.new(email, password)
+    Faraday.new do |builder|
+      builder.request :basic_auth, email, password
+      builder.use RewriteMiddleware
+      builder.adapter :net_http
+    end
   end
 end
