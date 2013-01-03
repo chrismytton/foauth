@@ -32,9 +32,10 @@ foauth url using the hostname and the path.
 ```ruby
 response = client.get('https://api.twitter.com/1/statuses/user_timeline.json')
 # An authenticated request is made to https://foauth.org/api.twitter.com/1/statuses/user_timeline.json
-puts response.success?
-puts response.body
-puts response.status
+
+puts response.success?  # true
+puts response.body      # [{"created_at":"Mon Dec 31 23:59:13 +0000 2012"...
+puts response.status    # 200
 ```
 
 The `client` returned is an instance of `Faraday::Connection` and the
