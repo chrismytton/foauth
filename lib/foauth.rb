@@ -8,7 +8,7 @@ module Foauth
     Faraday.new do |builder|
       builder.request :basic_auth, email, password
       builder.use RewriteMiddleware
-      builder.adapter :net_http
+      builder.adapter Faraday.default_adapter
     end
   end
 end
