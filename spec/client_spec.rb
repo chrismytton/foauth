@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Foauth do
   let(:client) { Foauth.new('bob@example.org', '123') }
   let(:response) { client.get('https://api.twitter.com/1/statuses/user_timeline.json') }
-  let(:auth) { response.env[:request_headers]['Authorization'] }
+  let(:request_headers) { response.env[:request_headers] }
 
   before do
     client.adapter :test do |stub|
@@ -12,6 +12,6 @@ describe Foauth do
   end
 
   it "authenticates with email and password" do
-    expect(auth).to eq 'Basic Ym9iQGV4YW1wbGUub3JnOjEyMw=='
+    expect(request_headers['Authorization']).to eq 'Basic Ym9iQGV4YW1wbGUub3JnOjEyMw=='
   end
 end
