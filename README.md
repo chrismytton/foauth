@@ -31,6 +31,7 @@ foauth url using the hostname and the path.
 
 ```ruby
 response = client.get('https://api.twitter.com/1/statuses/user_timeline.json')
+# An authenticated request is made to https://foauth.org/api.twitter.com/1/statuses/user_timeline.json
 puts response.success?
 puts response.body
 puts response.status
