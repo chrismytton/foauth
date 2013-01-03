@@ -1,6 +1,6 @@
 # Foauth
 
-[foauth.org][foauth] Ruby client build on top of [faraday][].
+[foauth.org][foauth] Ruby client built on top of [faraday][].
 
 ## Installation
 
