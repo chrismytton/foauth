@@ -1,6 +1,6 @@
 # Foauth
 
-Use [foauth.org](https://foauth.org) from Ruby.
+[foauth.org][foauth] Ruby client build on top of [faraday][].
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Create a new client passing in your foauth email and password.
+Create a new client passing in your [foauth][] email and password.
 
 ```ruby
 client = Foauth.new('bob@example.org', 'secret')
@@ -37,8 +37,9 @@ puts response.body
 puts response.status
 ```
 
-The `client` returned is an instance of `Faraday::Connection`, you can treat
-it accordingly.
+The `client` returned is an instance of `Faraday::Connection` and the
+`response` is an instance of `Faraday::Response`. See [faraday][] for
+more information.
 
 ## Contributing
 
@@ -50,8 +51,10 @@ it accordingly.
 
 ## Credits
 
-Inspired by
-[requests-foauth](https://github.com/kennethreitz/requests-foauth) by
-@kennethreitz.
+Inspired by [requests-foauth][] by @kennethreitz.
 
 Copyright (c) Chris Mytton
+
+[foauth]: https://foauth.org
+[faraday]: https://github.com/lostisland/faraday
+[requests-foauth]: https://github.com/kennethreitz/requests-foauth
