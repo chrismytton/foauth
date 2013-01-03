@@ -1,5 +1,3 @@
-require "foauth/version"
-
-module Foauth
-  # Your code goes here...
-end
+require 'foauth/version'
+require 'foauth/rewrite_middleware'
+require 'foauth/client'

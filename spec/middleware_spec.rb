@@ -1,4 +1,4 @@
-require 'foauth/rewrite_middleware'
+require 'spec_helper'
 
 describe Foauth::RewriteMiddleware do
   let(:conn) do
