@@ -1,12 +1,14 @@
 # Foauth
 
-TODO: Write a gem description
+Use [foauth.org](https://foauth.org) from Ruby.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'foauth'
+```ruby
+gem 'foauth'
+```
 
 And then execute:
 
@@ -18,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a new client passing in your foauth email and password.
+
+```ruby
+client = Foauth.new('bob@example.org', 'secret')
+```
+
+When you make a request the url will automatically be converted to a
+foauth url using the hostname and the path.
+
+```ruby
+response = client.get('https://api.twitter.com/1/statuses/user_timeline.json')
+puts response.success?
+puts response.body
+puts response.status
+```
+
+The `client` returned is an instance of `Faraday::Connection`, you can treat
+it accordingly.
 
 ## Contributing
 
@@ -27,3 +46,11 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Credits
+
+Inspired by
+[requests-foauth](https://github.com/kennethreitz/requests-foauth) by
+@kennethreitz.
+
+Copyright (c) Chris Mytton
