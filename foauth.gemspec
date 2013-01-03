@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Foauth::VERSION
   gem.authors       = ["Chris Mytton"]
   gem.email         = ["self@hecticjeff.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{foauth.org ruby client}
+  gem.summary       = %q{Transparently make authenticated API requests via foauth.org}
+  gem.homepage      = "https://github.com/hecticjeff/foauth"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
