@@ -26,7 +26,7 @@ Create a new client passing in your [foauth][] email and password.
 client = Foauth.new('bob@example.org', 'secret')
 ```
 
-When you make a request the url will automatically be converted to a
+When you make a request to one of the supported [foauth services][] the url will automatically be converted to a
 foauth url using the hostname and the path.
 
 ```ruby
@@ -58,3 +58,4 @@ Copyright (c) Chris Mytton
 [foauth]: https://foauth.org
 [faraday]: https://github.com/lostisland/faraday
 [requests-foauth]: https://github.com/kennethreitz/requests-foauth
+[foauth services]: https://foauth.org/services/
