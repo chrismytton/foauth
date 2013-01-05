@@ -52,6 +52,11 @@ more information.
 
 ## Version history
 
+**0.2.0** (January 5, 2013)
+
+* Allow client to accept a block to configure Faraday
+  ([#2](https://github.com/hecticjeff/foauth/issues/2))
+
 **0.1.0** (January 5, 2013)
 
 * Make sure query string is passed through to foauth
