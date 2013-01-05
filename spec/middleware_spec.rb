@@ -14,4 +14,9 @@ describe Foauth::RewriteMiddleware do
     res = conn.get('https://api.twitter.com/1/statuses/user_timeline.json')
     expect(res.env[:url].to_s).to eq 'https://foauth.org/api.twitter.com/1/statuses/user_timeline.json'
   end
+
+  it "preserves the query parameters" do
+    res = conn.get('https://api.twitter.com/1/statuses/user_timeline.json', foo: 'bar')
+    expect(res.env[:url].query).to eq 'foo=bar'
+  end
 end
