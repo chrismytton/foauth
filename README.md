@@ -2,6 +2,12 @@
 
 [foauth.org][foauth] Ruby client built on top of [faraday][].
 
+## Prerequisites
+
+To use this gem you'll need to go to [foauth.org][foauth] and register
+for an account, then go to the [services page][foauth services] and
+authenticate with the services you want to get your data out of.
+
 ## Installation
 
 Add this line to your application's Gemfile:
