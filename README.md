@@ -50,6 +50,16 @@ more information.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Version history
+
+**0.1.0** (January 5, 2013)
+
+* Make sure query string is passed through to foauth (#1)
+
+**0.0.1** (January 3, 2013)
+
+* Initial release
+
 ## Credits
 
 Inspired by [requests-foauth][] by @kennethreitz.
