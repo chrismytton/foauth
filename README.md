@@ -68,7 +68,11 @@ more information.
 
 ## Credits
 
-Inspired by [requests-foauth][] by @kennethreitz.
+Thanks to [@gulopine](https://github.com/gulopine) for creating
+[foauth.org][foauth].
+
+Inspired by [requests-foauth][] by
+[@kennethreitz](https://github.com/kennethreitz).
 
 Copyright (c) Chris Mytton
 
