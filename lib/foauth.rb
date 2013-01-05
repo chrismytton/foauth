@@ -18,13 +18,13 @@ module Foauth
 
   class RewriteMiddleware < Faraday::Middleware
     def call(env)
-      env[:url] = uri_for(env[:url])
+      env[:url] = foauth_proxy_url(env[:url])
       @app.call(env)
     end
 
     private
 
-    def uri_for(url)
+    def foauth_proxy_url(url)
       uri = URI.parse("https://foauth.org/#{url.host}#{url.path}")
       uri.query = url.query
       uri
