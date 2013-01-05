@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Foauth::RewriteMiddleware do
   let(:conn) do
-    conn = Faraday.new do |builder|
+    Faraday.new do |builder|
       builder.use Foauth::RewriteMiddleware
       builder.adapter :test do |stub|
         stub.get('/api.twitter.com/1/statuses/user_timeline.json') {[ 200, {}, '{}' ]}
