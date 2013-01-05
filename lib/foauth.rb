@@ -6,6 +6,7 @@ module Foauth
   #
   # @param [String] email Your foauth.org email address.
   # @param [String] password Your foauth.org password.
+  # @yield [builder] Passes the `Faraday::Builder` instance to the block if given.
   # @return [Faraday::Connection] Configured to proxy requests to foauth.org.
   def self.new(email, password)
     Faraday.new do |builder|
