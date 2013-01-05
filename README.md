@@ -44,9 +44,29 @@ puts response.body      # [{"created_at":"Mon Dec 31 23:59:13 +0000 2012"...
 puts response.status    # 200
 ```
 
+### Faraday
+
 The `client` returned is an instance of `Faraday::Connection` and the
-`response` is an instance of `Faraday::Response`. See [faraday][] for
-more information.
+`response` is an instance of `Faraday::Response`.
+
+You can pass a block to `Foauth.new` which will yield a
+`Faraday::Builder` instance.  This allows you to customize middleware
+and change the default http adapter.
+
+For example, if you want `response.body` to be automatically decoded for
+you then add `faraday_middleware` to your `Gemfile` and use the
+following code to add the json and xml parsing middleware.
+
+```ruby
+require 'faraday_middleware'
+
+client = Foauth.new 'bob@example.org', 'secret' do |builder|
+  builder.response :json, :content_type => /\bjson$/
+  builder.response :xml, :content_type => /\bxml$/
+end
+```
+
+See [faraday][] for more information.
 
 ## Contributing
 
