@@ -52,6 +52,11 @@ more information.
 
 ## Version history
 
+**0.2.1** (January 5, 2013)
+
+* Make sure client works without blocks
+  ([#3](https://github.com/hecticjeff/foauth/issues/3))
+
 **0.2.0** (January 5, 2013)
 
 * Allow client to accept a block to configure Faraday
