@@ -54,7 +54,8 @@ more information.
 
 **0.1.0** (January 5, 2013)
 
-* Make sure query string is passed through to foauth (#1)
+* Make sure query string is passed through to foauth
+  ([#1](https://github.com/hecticjeff/foauth/issues/1))
 
 **0.0.1** (January 3, 2013)
 
