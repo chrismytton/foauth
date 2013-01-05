@@ -8,7 +8,7 @@ describe Foauth do
     end
   end
 
-  let(:client) { Foauth.new('bob@example.org', '123') { |builder| builder.use TestMiddleware } }
+  let(:client) { Foauth.new('bob@example.org', '123') }
   let(:response) { client.get('https://api.twitter.com/1/statuses/user_timeline.json') }
   let(:request_headers) { response.env[:request_headers] }
 
@@ -22,7 +22,10 @@ describe Foauth do
     expect(request_headers['Authorization']).to eq 'Basic Ym9iQGV4YW1wbGUub3JnOjEyMw=='
   end
 
-  it "accepts a block for faraday configuration" do
-    expect(response.env['foo']).to eq 'bar'
+  describe "with a block" do
+    let(:client) { Foauth.new('bob@example.org', '123') { |builder| builder.use TestMiddleware } }
+    it "runs the given block" do
+      expect(response.env['foo']).to eq 'bar'
+    end
   end
 end

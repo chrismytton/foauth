@@ -9,7 +9,7 @@ module Foauth
       builder.request :basic_auth, email, password
       builder.use RewriteMiddleware
       builder.adapter Faraday.default_adapter
-      block.call(builder)
+      block.call(builder) if block_given?
     end
   end
 end
