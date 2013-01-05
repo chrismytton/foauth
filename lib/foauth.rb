@@ -2,6 +2,11 @@ require 'faraday'
 require 'foauth/version'
 
 module Foauth
+  # Creates a new `Faraday` instance using the given `email` and `password`.
+  #
+  # @param [String] email Your foauth.org email address.
+  # @param [String] password Your foauth.org password.
+  # @return [Faraday::Connection] Configured to proxy requests to foauth.org.
   def self.new(email, password)
     Faraday.new do |builder|
       builder.request :basic_auth, email, password
