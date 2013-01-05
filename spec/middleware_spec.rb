@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Foauth::RewriteMiddleware do
+describe Foauth::Proxy do
   let(:conn) do
     Faraday.new do |builder|
-      builder.use Foauth::RewriteMiddleware
+      builder.request :foauth_proxy
       builder.adapter :test do |stub|
         stub.get('/api.twitter.com/1/statuses/user_timeline.json') {[ 200, {}, '{}' ]}
       end
