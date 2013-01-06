@@ -78,6 +78,10 @@ See [faraday][] for more information.
 
 ## Version history
 
+**0.2.2** (January 6, 2013)
+
+* Documentation updates
+
 **0.2.1** (January 5, 2013)
 
 * Make sure client works without blocks
