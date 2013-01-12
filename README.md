@@ -70,7 +70,7 @@ See [faraday][] for more information.
 
 ## Build status
 
-[![Build status badge](https://api.travis-ci.org/hecticjeff/foauth.png)](https://api.travis-ci.org/hecticjeff/foauth)
+[![Build status badge](https://travis-ci.org/hecticjeff/foauth.png)](https://travis-ci.org/hecticjeff/foauth)
 
 ## Contributing
 
