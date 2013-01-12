@@ -16,7 +16,7 @@ describe Foauth::Proxy do
   end
 
   it "preserves the query parameters" do
-    res = conn.get('https://api.twitter.com/1/statuses/user_timeline.json', foo: 'bar')
+    res = conn.get('https://api.twitter.com/1/statuses/user_timeline.json', :foo => 'bar')
     expect(res.env[:url].query).to eq 'foo=bar'
   end
 end
