@@ -82,6 +82,11 @@ See [faraday][] for more information.
 
 ## Version history
 
+**0.3.0** (January 12, 2013)
+
+* Ruby 1.8 support
+* Travis CI builds
+
 **0.2.2** (January 6, 2013)
 
 * Documentation updates
