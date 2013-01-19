@@ -28,4 +28,21 @@ describe Foauth do
       expect(response.env['foo']).to eq 'bar'
     end
   end
+
+  describe "with environment varaibles" do
+    let(:client) do
+      ENV['FOAUTH_EMAIL'] = 'foo@example.org'
+      ENV['FOAUTH_PASSWORD'] = 'secret'
+      Foauth.new
+    end
+
+    after do
+      ENV.delete('FOAUTH_EMAIL')
+      ENV.delete('FOAUTH_PASSWORD')
+    end
+
+    it "authenticates with environment credentials" do
+      expect(request_headers['Authorization']).to eq 'Basic Zm9vQGV4YW1wbGUub3JnOnNlY3JldA=='
+    end
+  end
 end
