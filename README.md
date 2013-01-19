@@ -26,7 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-Create a new client passing in your [foauth][] email and password.
+Create a new client passing in your [foauth][] email and password. If
+you don't pass any credentials then it will look in the `FOAUTH_EMAIL`
+and `FOAUTH_PASSWORD` environment variables.
 
 ```ruby
 client = Foauth.new('bob@example.org', 'secret')
