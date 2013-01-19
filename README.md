@@ -84,6 +84,12 @@ See [faraday][] for more information.
 
 ## Version history
 
+**0.4.0** (January 19, 2013)
+
+* Credentials can now be read from the environment variables
+  `FOAUTH_EMAIL` and `FOAUTH_PASSWORD`. With these set you can create a
+  new client with no arguments (`Foauth.new`).
+
 **0.3.0** (January 12, 2013)
 
 * Ruby 1.8 support
